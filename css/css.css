@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+.accord {
+  max-width: 460px;
+  margin: auto;
+  margin-top: 10%;}
+
+  .accord__logo {
+    text-align: center;}
+
+  .accord__list {
+    padding-left: 0;
+    list-style: none;}
+
+    .accord__item {
+      overflow: hidden;
+      border-radius: 20px;
+      background-color: #e7e7e7;
+      margin-bottom: 10px;}
+
+      .accord__link {
+        padding: 12px 20px;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #ff8663;
+        border-radius: 47px;
+        transition-duration: .5s;
+        position: relative;}
+        .accord__link:after {
+          content: '';
+          position: absolute;
+          right: 20px;
+          top: 16px;
+          height: 14px;
+          width: 14px;
+          background: url('../images/arrowUp.png') center center no-repeat;
+        }
+
+      .collapse .accord__link {
+        background-color: #e7e7e7;
+        color: #4f4f4f;}
+      .collapse .accord__link:after {
+        background-image: url('../images/arrowDown.png');
+      }
+      .accord__item.collapse .collapse__container {
+        height: 0px;
+        transition-duration: .5s;}
+
+      .accord__item .collapse__container {
+        height: auto;
+        transition-duration: .5s;}
+
+        .collapse__list {
+          padding: 10px 20px;
+          list-style: none;}
+
+          .collapse__item + .collapse__item {
+            margin-top: 10px;
+          }
+
+.accord__item:nth-of-type(odd).collapse .accord__link {
+  background-color: #696666;
+  color: #fff;}
